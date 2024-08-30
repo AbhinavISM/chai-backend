@@ -4,10 +4,10 @@ import {
     deleteComment,
     getVideoComments,
     updateComment,
-} from "../controllers/comment.controller.js"
-import {verifyJWT} from "../middlewares/auth.middleware.js"
+} from "../controllers/comment.controller.js";
+import { verifyJWT } from "../middlewares/auth.middleware.js";
 
-const router = Router();
+const router = Router({mergeParams:true});
 
 router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
 
